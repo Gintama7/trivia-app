@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+import Quiz from './Quiz';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+
+  const [quizPage, setQuizPage] = useState(false);
+
+  function clickHandler(){
+    setQuizPage(true);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+     { quizPage ? <Quiz/> :(<div className="first__page"><h1>Quizzical</h1>
+      <h3>Test your trivia knowledge</h3>
+      <button onClick={clickHandler}>Start Quiz</button></div>)}
+      
+    </>
   );
 }
 

@@ -1,0 +1,32 @@
+.quiz{
+ align-items: center;
+}
+
+.questions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.answers{
+    display: flex;   
+  
+}
+
+.footer{
+    margin-top: 25px;
+    display: flex;
+  justify-content: center;
+}
+
+.footer > button{
+    border: none;
+    background-color: blueviolet;
+    color: white;
+    width:100px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 15px;
+}
